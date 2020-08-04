@@ -3,7 +3,7 @@
   "version": "0.0.14",
   "slug": "scheduler",
   "description": "Manage your environment with ease",
-  "url": "https://github.com/hassio-addons/addon-scheduler/",
+  "url": "https://github.com/kubee-addons/addon-scheduler/",
   "advanced": true,
   "ingress": true,
   "ingress_port": 8099,

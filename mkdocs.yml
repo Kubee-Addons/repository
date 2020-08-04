@@ -1,0 +1,71 @@
+---
+# Project information
+site_name: "Kubee Add-ons"
+site_url: "https://kubee.ga/addons"
+site_description: "The primary goal of this project is to provide you with additional, high quality, add-ons that allow you to take your automated home to the next level."
+site_author: "Romeo Covaci"
+copyright: "Copyright 2017-2020 - Kubee."
+
+# Repository
+repo_name: "kubee-addons"
+repo_url: "https://github.com/kubee-addons/repository"
+edit_uri: ""
+
+# Theme configuration
+theme:
+  name: "material"
+  logo: "https://avatars3.githubusercontent.com/u/30772201?s=200&v=4"
+  icon: "https://avatars3.githubusercontent.com/u/30772201?s=200&v=4"
+  language: "en"
+  palette:
+    primary: "light-green"
+    accent: "green"
+  font:
+    text: "Exo2"
+    code: "Roboto"
+  feature:
+    tabs: false
+extra_css:
+  - css/extra.css
+
+# Customization
+extra:
+  manifest: "manifest.webmanifest"
+  social:
+    - type: "github"
+      link: "https://github.com/kubee-addons"
+    - type: "twitter"
+      link: "https://twitter.com/kubee-addons"
+    - type: "twitch"
+      link: "https://twitch.tv/kubeeapps"
+    - type: "youtube"
+      link: "https://youtube.com/kubeeapps"
+
+# Extensions
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+    #  emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# The pages to serve
+pages:
+  - "Our Add-ons": "index.md"
+  - "Beta Add-ons": "beta.md"
+  - "Edge Add-ons": "edge.md"
+  - "Contributing": "contributing.md"
+  - "Code of Conduct": "code-of-conduct.md"
+  - "License": "license.md"

@@ -1,4 +1,49 @@
-# Home Assistant Community Add-on: Portainer
+# Kubee Scheduler
+
+Scheduler Addon ...
+
+This addon give us the possibility to handle a simple week configuration of automation, light, binary_sensor, climate, cover, switch and script.
+
+![main](https://raw.githubusercontent.com/kubee-addons/addon-schedulerler/master/main.png)
+
+Entity setting section:
+
+We can made a group and set on or off action every day with follow format:
+
+- No Fill -- ( No action on this day)
+- HH:MM:SS - ( Time format )
+- sunrise/sunset - ( Action at sunrise/ sunset - sunrise/sunset )
+- sunrise+30M   (M = Minutes, S = Second) - ( Offset + or - at sunrise or sunset )  
+- :T27 - (:T + temperature to set) BETA
+
+![edit](https://raw.githubusercontent.com/kubee-addons/addon-schedulerler/master/edit.png)
+
+## Installation
+
+Copy the url of this addon into "Supervisor" -> "Addon Store" -> "Add New repository URL" after install it.
+
+## Configuration
+
+log_level: Level of logging messages default info
+max_retries: Number of retrying action default 2
+max_retry_interval: How many seconds to wait before retrying. default 5
+bk_color: The background color default vaule #f8f9fa (white)
+
+## Kubee service
+
+There is the possibility to enable or disable an entity by call these service on you automation/script:
+
+```yaml
+service: hassio.addon_stdin
+data:
+  addon: 998c1fd8_homeassistantscheduler
+  input: light_group:enable_on
+```
+
+addon = name of addon
+input = group name:action (enable_on or enable_off)
+
+## Scheduler
 
 Portainer is an open-source lightweight management UI which allows you to
 easily manage a Docker host(s) or Docker swarm clusters.
@@ -14,7 +59,7 @@ your whole system. While this add-on is created and maintained with care and
 with security in mind, in the wrong or inexperienced hands,
 it could damage your system.
 
-## Installation
+## Scheduler Installation
 
 The installation of this add-on is pretty straightforward and no different
 compared to installing any other Home Assistant add-on.
@@ -28,7 +73,7 @@ add-on. Without it, the add-on is unable to access Docker.
 1. Start the "Portainer" add-on.
 1. Check the logs of the "Portainer" add-on to see if everything went well.
 
-## Configuration
+## Scheduler Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
 
@@ -105,7 +150,7 @@ You could also [open an issue here][issue] GitHub.
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
+The original setup of this repository is by [Romeo Covaci][Romeo].
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -114,7 +159,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2020 Franck Nijhof
+Copyright (c) 2018-2020 Romeo Covaci
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -134,13 +179,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/hassio-addons/addon-portainer/graphs/contributors
+[contributors]: https://github.com/kubee-addons/addon-portainer/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-portainer/68836?u=frenck
-[frenck]: https://github.com/frenck
-[issue]: https://github.com/hassio-addons/addon-portainer/issues
+[forum]: https://kubee.ga/68836?u=Romeo
+[romeo]: https://github.com/romeocovaci
+[issue]: https://github.com/kubee-addons/addon-portainer/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-portainer/releases
+[reddit]: https://reddit.com/r/kubeeapps
+[releases]: https://github.com/kubee-addons/addon-portainer/releases
 [semver]: http://semver.org/spec/v2.0.0.htm

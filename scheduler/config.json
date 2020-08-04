@@ -1,6 +1,6 @@
 {
   "name": "Scheduler",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "slug": "scheduler",
   "description": "Manage your Docker environment with ease",
   "url": "https://github.com/hassio-addons/addon-scheduler/",

@@ -4,7 +4,7 @@ site_name: "Kubee Add-ons"
 site_url: "https://kubee.ga/addons"
 site_description: "The primary goal of this project is to provide you with additional, high quality, add-ons that allow you to take your automated home to the next level."
 site_author: "Romeo Covaci"
-copyright: "Copyright 2017-2020 - Kubee."
+copyright: "Copyright 2017-2021 - Kubee."
 
 # Repository
 repo_name: "kubee-addons"
